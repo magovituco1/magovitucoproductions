@@ -120,3 +120,17 @@ if(contactForm){
     }
   });
 }
+
+// V13.1: load Vimeo only following explicit user activation.
+document.querySelectorAll('.video-launch').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const iframe=document.createElement('iframe');
+    iframe.title=document.documentElement.lang==='es'?'Video promocional de Mago Vituco':'Mago Vituco showreel';
+    iframe.allow='autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen=true;
+    iframe.referrerPolicy='strict-origin-when-cross-origin';
+    iframe.src=button.dataset.videoSrc;
+    button.replaceWith(iframe);
+    iframe.focus();
+  },{once:true});
+});

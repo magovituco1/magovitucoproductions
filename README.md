@@ -14,3 +14,6 @@ Base: Premium V12 SEO. Sitio estático para GitHub Pages, https://www.magovituco
 ## Publicación
 Subir el contenido de este ZIP a la raíz de main del repositorio magovituco1/magovitucoproductions, incluyendo assets/ y es/. Mantener CNAME y cualquier archivo de verificación que ya exista en GitHub. No cambiar DNS ni dominio.
 Comprobar ambas páginas, cambio de idioma, Vimeo y formulario. Repetir PageSpeed Insights móvil y ordenador. No hace falta reenviar el sitemap si no cambia.
+
+## V13.1 — Performance Fix
+Reproductor Vimeo bajo demanda, con imagen local y aviso de conexión. El parámetro dnt=1 reduce el seguimiento, pero Vimeo puede usar cookies esenciales al reproducir. Puede afectar al descubrimiento automático del vídeo por Google. Se conservan SEO, formulario, imágenes y navegación. Repetir PageSpeed tras publicar.
