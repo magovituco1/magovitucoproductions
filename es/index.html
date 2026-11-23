@@ -344,6 +344,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 /* Only animate sections when JavaScript is active. */
 html:not(.js-ready) .reveal{opacity:1;transform:none}
 
+
+/* V13.3: stable panoramic player, including Safari. */
+.video-shell{display:block}
+.video-frame{width:100%;max-width:820px;margin-inline:auto;aspect-ratio:auto;height:auto;position:relative;overflow:hidden;isolation:isolate}
+.video-frame::before{content:"";display:block;padding-top:56.25%}
+.video-frame .video-cover{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center;background:#050505;opacity:1}
+.video-frame .video-launch{appearance:none;-webkit-appearance:none;position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;border-radius:0;background:rgba(0,0,0,.22);display:flex;align-items:center;justify-content:center;color:#fff;z-index:1}
+.video-frame .video-launch-content{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:95%;padding:12px;text-shadow:0 2px 8px #000}
+.video-frame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0;z-index:2}
+.video-frame .video-fallback{z-index:2}
+@media(max-width:480px){.video-play-symbol{width:48px;height:48px;font-size:20px}.video-launch strong{font-size:12px}.video-launch small{font-size:10px}.video-frame .video-launch-content{gap:6px}}
 </style>
 <meta content="website" property="og:type"/><meta content="dark" name="color-scheme"/><link href="../favicon.ico" rel="icon" sizes="any"/><link href="../assets/favicon.png" rel="icon" type="image/png"/><link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/><link href="https://www.magovituco.com/es/" rel="canonical"/><link href="https://www.magovituco.com/" hreflang="en" rel="alternate"/><link href="https://www.magovituco.com/es/" hreflang="es" rel="alternate"/><link href="https://www.magovituco.com/" hreflang="x-default" rel="alternate"/><meta content="Espectáculos de magia para cruceros | Mago Vituco Productions" property="og:title"/><meta content="Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco." property="og:description"/><meta content="https://www.magovituco.com/es/" property="og:url"/><meta content="https://www.magovituco.com/assets/hero-main.webp" property="og:image"/><meta content="es_ES" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Espectáculos de magia para cruceros | Mago Vituco Productions" name="twitter:title"/><meta content="Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco." name="twitter:description"/><meta content="index, follow, max-image-preview:large" name="robots"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.magovituco.com/#organization","name":"Mago Vituco Productions","alternateName":"Mago Vituco Producciones","url":"https://www.magovituco.com/","logo":"https://www.magovituco.com/assets/logo-main.png","email":"info@magovituco.com","telephone":"+34 619 823 559","sameAs":["https://www.instagram.com/magovituco","https://www.linkedin.com/in/magovituco","https://vimeo.com/magovituco"],"description":"International magic and live entertainment production for cruise ships and ferries."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.magovituco.com/es/#webpage","url":"https://www.magovituco.com/es/","name":"Espectáculos de magia para cruceros | Mago Vituco Productions","description":"Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco.","inLanguage":"es","isPartOf":{"@type":"WebSite","@id":"https://www.magovituco.com/#website","url":"https://www.magovituco.com/","name":"Mago Vituco Productions"},"about":{"@id":"https://www.magovituco.com/#organization"}}</script></head>
 <body>
@@ -454,7 +465,7 @@ html:not(.js-ready) .reveal{opacity:1;transform:none}
 </div>
 <div class="video-shell">
 <div class="video-frame">
-<button type="button" class="video-launch" data-video-src="https://player.vimeo.com/video/1026089038?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1&amp;autoplay=1" aria-label="REPRODUCIR VÍDEO"><img src="../assets/hero-desktop.webp" alt="" loading="lazy" decoding="async" width="1800" height="961"><span class="video-launch-content"><span class="video-play-symbol" aria-hidden="true">▶</span><strong>REPRODUCIR VÍDEO</strong><small>Al reproducir el vídeo se conecta con Vimeo.</small></span></button><noscript><a class="video-fallback" href="https://vimeo.com/1026089038">Ver vídeo en Vimeo</a></noscript>
+<img class="video-cover" src="../assets/hero-desktop.webp" alt="" loading="lazy" decoding="async" width="1800" height="961"><button type="button" class="video-launch" data-video-src="https://player.vimeo.com/video/1026089038?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1&amp;autoplay=1" aria-label="REPRODUCIR VÍDEO"><span class="video-launch-content"><span class="video-play-symbol" aria-hidden="true">▶</span><strong>REPRODUCIR VÍDEO</strong><small>Al reproducir el vídeo se conecta con Vimeo.</small></span></button><noscript><a class="video-fallback" href="https://vimeo.com/1026089038">Ver vídeo en Vimeo</a></noscript>
 </div>
 </div>
 <a class="text-link" data-i="moreVideos" href="https://vimeo.com/magovituco" rel="noopener noreferrer" target="_blank">MÁS VÍDEOS EN VIMEO ↗</a>
@@ -563,6 +574,6 @@ html:not(.js-ready) .reveal{opacity:1;transform:none}
 <span>© <span id="year"></span> MAGO VITUCO PRODUCTIONS</span>
 </div>
 </footer>
-<script defer="" src="../script.js?v=13.2"></script>
+<script defer="" src="../script.js?v=13.3"></script>
 <a class="floating-contact" data-i="floatContact" href="#contact">CONTACTAR ↗</a></body>
 </html>

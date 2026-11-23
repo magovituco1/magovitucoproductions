@@ -87,6 +87,7 @@ document.querySelectorAll('.video-launch').forEach(button=>{
     iframe.allowFullscreen=true;
     iframe.referrerPolicy='strict-origin-when-cross-origin';
     iframe.src=button.dataset.videoSrc;
+    button.parentElement.querySelector(".video-cover")?.remove();
     button.replaceWith(iframe);
     iframe.focus();
   },{once:true});

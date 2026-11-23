@@ -1,4 +1,4 @@
-# MAGO VITUCO PRODUCTIONS — Premium V13.2 SEO & Performance
+# MAGO VITUCO PRODUCTIONS — Premium V13.3 SEO & Performance
 
 Base: Premium V12 SEO. Sitio estático para GitHub Pages, https://www.magovituco.com/.
 
@@ -25,3 +25,6 @@ Reproductor Vimeo bajo demanda, con imagen local y aviso de conexión. El parám
 - llms.txt informativo opcional; comprobar que devuelve HTTP 200 tras publicar. No garantiza posicionamiento ni corrige fallos del servidor.
 - Se conserva Vimeo bajo demanda. Caché HTTP depende de GitHub Pages.
 - Validar diseño, vídeo, navegación, formulario y PageSpeed en ambos idiomas tras publicar.
+
+## V13.3
+- Reproductor panorámico 16:9 con imagen independiente del botón y sin deformación; mantiene Vimeo bajo demanda.
