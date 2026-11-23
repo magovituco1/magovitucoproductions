@@ -1,17 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#08090b">
-  <meta name="robots" content="noindex, follow">
-  <title>Thank you | Mago Vituco Producciones</title>
-  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#08090b" name="theme-color"/>
+<meta content="noindex, follow" name="robots"/>
+<title>Thank you | Mago Vituco Producciones</title>
+<link href="favicon.ico" rel="icon" sizes="any"/><link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;700;800&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="style.css?v=13" rel="stylesheet"/>
+<style>
     body{min-height:100svh;background:#08090b}
     .thanks-header{display:flex;justify-content:space-between;align-items:center;gap:18px;width:min(1000px,calc(100% - 40px));margin:0 auto;padding:22px 0}
     .thanks-header img{width:min(240px,53vw);height:auto;max-height:70px;object-fit:contain}
@@ -31,21 +32,21 @@
   </style>
 </head>
 <body>
-  <header class="thanks-header">
-    <a href="./" aria-label="Mago Vituco Productions home"><img src="assets/logo-main.png" alt="Mago Vituco Productions"></a>
-    <div class="thanks-language" aria-label="Language"><button type="button" data-lang="en" class="active">EN</button><span>/</span><button type="button" data-lang="es">ES</button></div>
-  </header>
-  <main class="thanks-page">
-    <section class="thanks-card" aria-labelledby="thanks-title">
-      <div class="thanks-symbol" aria-hidden="true">✓</div>
-      <div class="thanks-kicker" id="thanks-kicker">MESSAGE SENT</div>
-      <h1 id="thanks-title">Thank you for contacting us!</h1>
-      <p id="thanks-description">Your message has been submitted successfully. We’ll get back to you as soon as possible.</p>
-      <a class="btn btn-gold" href="./" id="thanks-home"><span id="thanks-home-label">BACK TO HOME</span><span aria-hidden="true">↗</span></a>
-    </section>
-  </main>
-  <footer class="thanks-footer">MAGO VITUCO PRODUCTIONS · <a href="mailto:info@magovituco.com">info@magovituco.com</a></footer>
-  <script>
+<header class="thanks-header">
+<a aria-label="Mago Vituco Productions home" href="./"><img alt="Mago Vituco Productions" height="106" src="assets/logo-main-600.webp" width="600"/></a>
+<div aria-label="Language" class="thanks-language"><button class="active" data-lang="en" type="button">EN</button><span>/</span><button data-lang="es" type="button">ES</button></div>
+</header>
+<main class="thanks-page">
+<section aria-labelledby="thanks-title" class="thanks-card">
+<div aria-hidden="true" class="thanks-symbol">✓</div>
+<div class="thanks-kicker" id="thanks-kicker">MESSAGE SENT</div>
+<h1 id="thanks-title">Thank you for contacting us!</h1>
+<p id="thanks-description">Your message has been submitted successfully. We’ll get back to you as soon as possible.</p>
+<a class="btn btn-gold" href="./" id="thanks-home"><span id="thanks-home-label">BACK TO HOME</span><span aria-hidden="true">↗</span></a>
+</section>
+</main>
+<footer class="thanks-footer">MAGO VITUCO PRODUCTIONS · <a href="mailto:info@magovituco.com">info@magovituco.com</a></footer>
+<script>
   (function(){
     const copy={en:{kicker:'MESSAGE SENT',title:'Thank you for contacting us!',description:'Your message has been submitted successfully. We’ll get back to you as soon as possible.',home:'BACK TO HOME'},es:{kicker:'MENSAJE ENVIADO',title:'¡Gracias por contactar con nosotros!',description:'Tu mensaje se ha enviado correctamente. Te responderemos lo antes posible.',home:'VOLVER AL INICIO'}};
     let lang=new URLSearchParams(location.search).get('lang');
@@ -53,6 +54,7 @@
     if(lang!=='es')lang='en';
     function apply(lang){
       document.documentElement.lang=lang;
+      document.getElementById('thanks-home').href=lang==='es'?'es/':'./';
       document.title=(lang==='es'?'Gracias por contactar | ':'Thank you | ')+'Mago Vituco Producciones';
       const data=copy[lang];
       for(const field of ['kicker','title','description','home'])document.getElementById('thanks-'+(field==='title'?'title':field==='description'?'description':field==='home'?'home-label':'kicker')).textContent=data[field];

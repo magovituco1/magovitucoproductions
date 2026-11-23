@@ -1,18 +1,16 @@
-# MAGO VITUCO PRODUCTIONS — Premium V12 SEO
+# MAGO VITUCO PRODUCTIONS — Premium V13 SEO & Performance
 
-Sitio estático para GitHub Pages: `https://www.magovituco.com/`.
+Base: Premium V12 SEO. Sitio estático para GitHub Pages, https://www.magovituco.com/.
 
-## Actualización respecto a V11
-- Textos profesionales orientados a búsqueda de entretenimiento para cruceros, magos invitados y grandes ilusiones; inglés y español.
-- Títulos y descripciones únicos por idioma, y tarjetas sociales coherentes.
-- Descripciones accesibles de imágenes relacionadas con shows y talleres.
-- Se ha eliminado el `<!DOCTYPE html>` duplicado de ambas páginas.
-- Se conservan formulario Formspree, aviso de envío, página de agradecimiento, favicon, sitemap, robots.txt, canonical, hreflang, fotos y diseño responsive.
+## Cambios V13
+- Imagen hero nativa, prioridad alta, precarga responsive y variantes WebP. Se conserva la foto, encuadre y animación.
+- Logo WebP optimizado y variantes responsive de fotos. Originales conservados.
+- Dimensiones intrínsecas de imágenes y ajuste de proporciones de tarjetas y logos.
+- Fuentes no bloqueantes con fallback sin JavaScript; CSS/JS con versión de caché.
+- Enlaces EN/ES rastreables; regreso desde agradecimiento en el idioma elegido.
+- Se conservan Formspree, Vimeo (lazy), canonical, hreflang, sitemap, robots y JSON-LD.
+- La política de caché HTTP y cabeceras de seguridad de GitHub Pages no se pueden modificar mediante HTML/CSS; no se promete una puntuación Lighthouse concreta.
 
-## Cómo publicar
-1. En GitHub, repositorio `magovituco1/magovitucoproductions`, subir **el contenido** de esta carpeta, incluida `es/` y `assets/`, a la raíz de `main`.
-2. Confirmar los cambios (Commit changes). No tocar el dominio ni Dinahosting.
-3. Comprobar `/`, `/es/`, `/sitemap.xml`, el cambio EN/ES y el formulario.
-4. Search Console ya tiene el sitemap; no hace falta enviarlo de nuevo solo por editar el texto.
-
-Esta actualización mejora los fundamentos SEO, pero no garantiza primeras posiciones.
+## Publicación
+Subir el contenido de este ZIP a la raíz de main del repositorio magovituco1/magovitucoproductions, incluyendo assets/ y es/. Mantener CNAME y cualquier archivo de verificación que ya exista en GitHub. No cambiar DNS ni dominio.
+Comprobar ambas páginas, cambio de idioma, Vimeo y formulario. Repetir PageSpeed Insights móvil y ordenador. No hace falta reenviar el sitemap si no cambia.

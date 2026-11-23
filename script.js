@@ -33,28 +33,22 @@ function setLanguage(lang){
   document.querySelectorAll('[data-lang]').forEach(b=>{
     let active=b.dataset.lang===lang;
     b.classList.toggle('active',active);
-    b.setAttribute('aria-pressed',String(active));
+    if(b.tagName==='A') b.setAttribute('aria-current',active?'page':'false'); else b.setAttribute('aria-pressed',String(active));
   });
   try{localStorage.setItem('mvp-language',lang)}catch(e){}
 }
 
-document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{
-  const requested=b.dataset.lang;
-  const current=window.location.pathname.replace(/\/+$/,'').endsWith('/es')?'es':'en';
-  if(requested===current)return;
-  try{localStorage.setItem('mvp-language',requested)}catch(e){}
-  window.location.assign(new URL(requested==='es'?'es/':'../', window.location.href).href);
-}));
+
 const menu=document.getElementById('menu');
 const nav=document.getElementById('nav');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
 document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
 document.getElementById('year').textContent=new Date().getFullYear();
 // Language belongs to the URL for search engines; English is the default home page.
-const pageLanguage=window.location.pathname.replace(/\/+$/,'').endsWith('/es')?'es':'en';
+const pageLanguage=/\/es(?:\/index\.html)?\/?$/.test(window.location.pathname)?'es':'en';
 if(pageLanguage==='es'){
   document.documentElement.lang='es';
-  document.querySelectorAll('[data-lang]').forEach(b=>{const active=b.dataset.lang==='es';b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+  document.querySelectorAll('[data-lang]').forEach(b=>{const active=b.dataset.lang==='es';b.classList.toggle('active',active);if(b.tagName==='A')b.setAttribute('aria-current',active?'page':'false');else b.setAttribute('aria-pressed',String(active))});
 }else{setLanguage('en')}
 
 

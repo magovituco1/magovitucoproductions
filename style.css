@@ -26,7 +26,7 @@ input,textarea{border-radius:0}
 .menu span{display:block;height:2px;background:white;margin:6px 0}
 
 .hero{height:min(900px,100svh);min-height:680px;position:relative;display:flex;align-items:center;overflow:hidden}
-.hero-image{position:absolute;inset:0;background:url('assets/hero-main.webp') center 30%/cover no-repeat;filter:saturate(.92)}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.92)}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#08090bf1 0%,#08090bbd 33%,#08090b55 100%),linear-gradient(0deg,#08090bd7 0%,transparent 45%)}
 .hero-content{position:relative;z-index:1;margin-top:50px}
 .eyebrow,.section-meta,.kicker{display:flex;align-items:center;gap:17px;font-size:11px;letter-spacing:.2em;font-weight:700;color:#ffcc00}
@@ -136,7 +136,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .menu{display:block}
   .nav-actions{gap:18px}
   .hero{min-height:660px;height:90svh}
-  .hero-image{background-position:62% center}
+  .hero-image{object-position:62% center}
   .hero-shade{background:linear-gradient(90deg,#08090be9,#08090b72),linear-gradient(0deg,#08090bef,transparent 50%)}
   .hero h1{font-size:clamp(43px,10vw,70px);letter-spacing:-.065em}
   .hero-content>p{font-size:17px}
@@ -168,7 +168,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .topbar.scrolled{background:rgba(8,9,12,.94);box-shadow:0 10px 45px rgba(0,0,0,.24)}
 .brand-logo{display:block;flex:0 1 275px;min-width:145px}
 .brand-logo img{width:100%;max-width:265px;height:auto;max-height:66px;object-fit:contain;object-position:left center}
-.hero-image{background-position:58% 35%;transform:scale(1.025);animation:heroDrift 17s ease-in-out alternate infinite}
+.hero-image{object-position:58% 35%;transform:scale(1.025);animation:heroDrift 17s ease-in-out alternate infinite}
 .hero-shade{background:linear-gradient(90deg,rgba(7,7,11,.93) 0%,rgba(7,7,11,.70) 38%,rgba(7,7,11,.09) 100%),linear-gradient(0deg,rgba(7,7,11,.75),transparent 44%)}
 .hero h1{text-wrap:balance;text-shadow:0 3px 40px rgba(0,0,0,.18)}
 .section h2{text-wrap:balance}
@@ -195,7 +195,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
  .topbar{background:rgba(8,9,12,.94)}
  .brand-logo{flex:0 1 220px;max-width:calc(100vw - 155px)}
  .brand-logo img{max-width:100%;max-height:55px;height:auto}
- .hero-image{background-position:63% center}
+ .hero-image{object-position:63% center}
  .hero-shade{background:linear-gradient(90deg,rgba(8,9,11,.86),rgba(8,9,11,.47)),linear-gradient(0deg,#08090be8,transparent 60%)}
  .hero-content{margin-top:45px}
  .hero h1{max-width:620px}
@@ -301,3 +301,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 /* V12: compact service description reinforces accessible cruise-entertainment copy */
 .seo-service-note{max-width:860px;margin:36px auto 0;text-align:center;font-size:15px;line-height:1.8;color:#c7c7c7}
 @media(max-width:760px){.seo-service-note{text-align:left;font-size:14px;margin-top:26px}}
+
+/* V13 — performance, intrinsic image dimensions and crawlable language links */
+.language a{color:#999;padding:5px 0}.language a.active{color:#ffcc00;font-weight:800}
+.hero-image{display:block;max-width:none}
+/* Keep the cinematic crop and animation; use a native image for early discovery. */
+.show-card .show-media{height:390px;display:flex;align-items:center;justify-content:center;padding:10px;background:#0c0d10}
+.show-card .show-media img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.logo-grid img{width:auto;height:auto;max-height:85px;max-width:100%;object-fit:contain}
+.contact-logo{height:auto;max-height:64px;width:auto;max-width:100%}
+.footer-brand img{height:auto;width:auto;max-height:52px;max-width:100%}
+.beyond-photo img,.experience-grid>img{width:auto;max-width:100%;height:auto;margin-inline:auto}
+@media(min-width:761px) and (max-width:1050px){.show-card .show-media{height:350px}}
+@media(max-width:760px){.show-card .show-media{height:370px}.footer-brand img{max-width:min(300px,100%)}}
+@media(max-width:390px){.show-card .show-media{height:340px}}
