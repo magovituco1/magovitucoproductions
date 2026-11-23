@@ -292,3 +292,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
  .beyond-photo{display:flex;order:2}
  .beyond-photo img{height:auto;max-height:460px;object-fit:contain}
 }
+
+/* V10: Contact form submission feedback */
+.form-status{font-size:13px;line-height:1.6;padding:12px 14px;margin:12px 0 0;background:#26201a;border-left:3px solid #ffcc00;color:#f4f2ed}
+.form-status.error{border-left-color:#e36b55}
+.contact-form button:disabled{opacity:.66;cursor:wait;transform:none}
