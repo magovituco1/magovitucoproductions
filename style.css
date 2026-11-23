@@ -297,3 +297,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .form-status{font-size:13px;line-height:1.6;padding:12px 14px;margin:12px 0 0;background:#26201a;border-left:3px solid #ffcc00;color:#f4f2ed}
 .form-status.error{border-left-color:#e36b55}
 .contact-form button:disabled{opacity:.66;cursor:wait;transform:none}
+
+/* V12: compact service description reinforces accessible cruise-entertainment copy */
+.seo-service-note{max-width:860px;margin:36px auto 0;text-align:center;font-size:15px;line-height:1.8;color:#c7c7c7}
+@media(max-width:760px){.seo-service-note{text-align:left;font-size:14px;margin-top:26px}}

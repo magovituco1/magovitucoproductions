@@ -1,33 +1,18 @@
-# MAGO VITUCO PRODUCTIONS — Premium V11 (SEO)
+# MAGO VITUCO PRODUCTIONS — Premium V12 SEO
 
-GitHub Pages compatible. English home page `/`; Spanish page `/es/`.
+Sitio estático para GitHub Pages: `https://www.magovituco.com/`.
 
-## Installation / Actualización
+## Actualización respecto a V11
+- Textos profesionales orientados a búsqueda de entretenimiento para cruceros, magos invitados y grandes ilusiones; inglés y español.
+- Títulos y descripciones únicos por idioma, y tarjetas sociales coherentes.
+- Descripciones accesibles de imágenes relacionadas con shows y talleres.
+- Se ha eliminado el `<!DOCTYPE html>` duplicado de ambas páginas.
+- Se conservan formulario Formspree, aviso de envío, página de agradecimiento, favicon, sitemap, robots.txt, canonical, hreflang, fotos y diseño responsive.
 
-Sube **todo el contenido** de esta carpeta al nivel principal de `magovituco1/magovitucoproductions` en la rama `main`. Mantén `assets/` y `es/` como carpetas. Actualiza los archivos existentes y añade los nuevos.
+## Cómo publicar
+1. En GitHub, repositorio `magovituco1/magovitucoproductions`, subir **el contenido** de esta carpeta, incluida `es/` y `assets/`, a la raíz de `main`.
+2. Confirmar los cambios (Commit changes). No tocar el dominio ni Dinahosting.
+3. Comprobar `/`, `/es/`, `/sitemap.xml`, el cambio EN/ES y el formulario.
+4. Search Console ya tiene el sitemap; no hace falta enviarlo de nuevo solo por editar el texto.
 
-**Archivos importantes:** `index.html`, `script.js`, `style.css`, `thanks.html`, `favicon.ico`, `assets/`, `es/index.html`, `robots.txt`, `sitemap.xml`.
-
-No cambies `www.magovituco.com` ni la configuración DNS actual. La URL de Formspree sigue siendo `https://formspree.io/f/mbgoppvw`; la página de agradecimiento se mantiene sin indexar.
-
-## Google Search Console
-
-Una vez desplegado, comprueba:
-- https://www.magovituco.com/robots.txt
-- https://www.magovituco.com/sitemap.xml
-- https://www.magovituco.com/es/
-
-Ve a Search Console > Sitemaps y envía `sitemap.xml`. Inspecciona la URL en español y solicita indexación si es accesible. Indexación y ranking no están garantizados.
-
-## SEO incluido
-
-- Títulos y meta descriptions específicos por idioma.
-- Canonical y `hreflang` recíprocos para `/` y `/es/`.
-- Open Graph y Twitter Card.
-- Datos estructurados `Organization` y `WebPage`, con los contactos y redes aportados.
-- Sitemap XML y robots.txt.
-- Preserva diseño, fotografías, favicon, Vimeo y Formspree.
-
-## Notas
-
-El sitio sigue usando la navegación de una sola página con secciones. Los enlaces internos con `#` no son URLs separadas indexables. No hay promesas de resultados de posicionamiento ni se han añadido reseñas o premios inventados.
+Esta actualización mejora los fundamentos SEO, pero no garantiza primeras posiciones.
