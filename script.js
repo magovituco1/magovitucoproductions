@@ -16,6 +16,8 @@ const translations={
 const translatable=document.querySelectorAll('[data-i]');
 function setLanguage(lang){
   document.documentElement.lang=lang;
+  const formNext=document.getElementById("form-next");
+  if(formNext) formNext.value="https://magovituco1.github.io/magovitucoproductions/thanks.html?lang="+encodeURIComponent(lang);
   for(const el of translatable){
     if(!el.dataset.en) el.dataset.en=el.innerHTML;
     el.innerHTML = lang==='es' ? (translations.es[el.dataset.i] ?? el.dataset.en) : el.dataset.en;

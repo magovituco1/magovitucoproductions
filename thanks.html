@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="robots" content="noindex, follow">
+  <title>Thank you | Mago Vituco Producciones</title>
+  <link rel="icon" href="assets/logo-main.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{min-height:100svh;background:#08090b}
+    .thanks-header{display:flex;justify-content:space-between;align-items:center;gap:18px;width:min(1000px,calc(100% - 40px));margin:0 auto;padding:22px 0}
+    .thanks-header img{width:min(240px,53vw);height:auto;max-height:70px;object-fit:contain}
+    .thanks-language{display:flex;align-items:center;gap:9px;color:#aaa;font-size:13px}
+    .thanks-language button{color:#aaa;background:none;border:0;padding:8px 4px}
+    .thanks-language button.active{color:#ffcc00;font-weight:800}
+    .thanks-page{min-height:calc(100svh - 130px);display:grid;place-items:center;padding:45px 20px 75px;position:relative;overflow:hidden}
+    .thanks-page:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#08090bf2,#08090bca),url('assets/hero-main.webp') center 43%/cover no-repeat;opacity:.9;z-index:0}
+    .thanks-card{position:relative;z-index:1;width:min(720px,100%);text-align:center;padding:clamp(32px,6vw,72px) clamp(23px,5vw,60px);background:rgba(15,16,20,.87);border:1px solid rgba(255,204,0,.24);box-shadow:0 26px 85px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
+    .thanks-symbol{width:66px;height:66px;margin:0 auto 23px;display:grid;place-items:center;border:2px solid #ffcc00;border-radius:50%;font-size:34px;color:#ffcc00;font-weight:700}
+    .thanks-kicker{font-size:12px;letter-spacing:.2em;color:#ffcc00;font-weight:800;margin:0 0 20px}
+    .thanks-card h1{font:800 clamp(35px,6.4vw,64px)/1.1 Manrope,sans-serif;letter-spacing:-.055em;margin:0 0 20px;color:#f4f2ed}
+    .thanks-card p{font-size:clamp(15px,2.2vw,18px);line-height:1.8;color:#d0ced0;margin:0 auto 32px;max-width:480px}
+    .thanks-card .btn{width:fit-content;max-width:100%;margin:0 auto}
+    .thanks-footer{font-size:11px;color:#8d8c90;letter-spacing:.08em;text-align:center;padding:20px}
+    @media(max-width:500px){.thanks-card .btn{font-size:10px}.thanks-page{padding:22px 16px 55px}}
+  </style>
+</head>
+<body>
+  <header class="thanks-header">
+    <a href="./" aria-label="Mago Vituco Productions home"><img src="assets/logo-main.png" alt="Mago Vituco Productions"></a>
+    <div class="thanks-language" aria-label="Language"><button type="button" data-lang="en" class="active">EN</button><span>/</span><button type="button" data-lang="es">ES</button></div>
+  </header>
+  <main class="thanks-page">
+    <section class="thanks-card" aria-labelledby="thanks-title">
+      <div class="thanks-symbol" aria-hidden="true">✓</div>
+      <div class="thanks-kicker" id="thanks-kicker">MESSAGE SENT</div>
+      <h1 id="thanks-title">Thank you for contacting us!</h1>
+      <p id="thanks-description">Your message has been submitted successfully. We’ll get back to you as soon as possible.</p>
+      <a class="btn btn-gold" href="./" id="thanks-home"><span id="thanks-home-label">BACK TO HOME</span><span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="thanks-footer">MAGO VITUCO PRODUCTIONS · <a href="mailto:info@magovituco.com">info@magovituco.com</a></footer>
+  <script>
+  (function(){
+    const copy={en:{kicker:'MESSAGE SENT',title:'Thank you for contacting us!',description:'Your message has been submitted successfully. We’ll get back to you as soon as possible.',home:'BACK TO HOME'},es:{kicker:'MENSAJE ENVIADO',title:'¡Gracias por contactar con nosotros!',description:'Tu mensaje se ha enviado correctamente. Te responderemos lo antes posible.',home:'VOLVER AL INICIO'}};
+    let lang=new URLSearchParams(location.search).get('lang');
+    if(lang!=='es'&&lang!=='en'){try{lang=localStorage.getItem('mvp-language')}catch(e){}}
+    if(lang!=='es')lang='en';
+    function apply(lang){
+      document.documentElement.lang=lang;
+      document.title=(lang==='es'?'Gracias por contactar | ':'Thank you | ')+'Mago Vituco Producciones';
+      const data=copy[lang];
+      for(const field of ['kicker','title','description','home'])document.getElementById('thanks-'+(field==='title'?'title':field==='description'?'description':field==='home'?'home-label':'kicker')).textContent=data[field];
+      document.querySelectorAll('[data-lang]').forEach(b=>{const on=b.dataset.lang===lang;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on?'true':'false')});
+      try{localStorage.setItem('mvp-language',lang)}catch(e){}
+    }
+    document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.lang)));
+    apply(lang);
+  })();
+  </script>
+</body>
+</html>
