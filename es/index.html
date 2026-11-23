@@ -3,20 +3,354 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/><link as="image" fetchpriority="high" href="../assets/hero-mobile.webp" media="(max-width: 760px)" rel="preload"/><link as="image" fetchpriority="high" href="../assets/hero-desktop.webp" media="(min-width: 761px)" rel="preload"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link as="image" fetchpriority="high" href="../assets/hero-mobile-v132.webp" media="(max-width: 760px)" rel="preload"/><link as="image" fetchpriority="high" href="../assets/hero-desktop.webp" media="(min-width: 761px)" rel="preload"/>
 <meta content="#0c0d10" name="theme-color"/>
 <meta content="Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco." name="description"/>
 <title>Espectáculos de magia para cruceros | Mago Vituco Productions</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
-<link href="../style.css?v=13" rel="stylesheet"/>
+<style>
+*:where(:not(html,iframe,canvas,img,svg,video):not(svg *,symbol *)){box-sizing:border-box}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:#0c0d10;color:#f4f2ed;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+input,textarea{border-radius:0}
+.wrap{width:min(1200px,calc(100% - 88px));margin-inline:auto}
+.section{padding-block:124px}
+.gold{color:#ffcc00}
+.skip{position:absolute;top:-100px;left:15px;background:white;color:black;padding:10px;z-index:30}
+.skip:focus{top:10px}
+
+.topbar{height:86px;padding:0 clamp(22px,4vw,70px);position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff26}
+.brand-logo img{height:50px;width:auto;object-fit:contain}
+.topbar nav{display:flex;align-items:center;gap:clamp(15px,2vw,32px)}
+.topbar nav a{font-size:12px;color:#eeeae2;transition:color .2s}
+.topbar nav a:hover,.social-labels a:hover,.social-icons a:hover{color:#ffcc00}
+.nav-actions{display:flex;gap:25px;align-items:center}
+.language{display:flex;align-items:center;gap:8px;color:#7e7e80;font-size:12px}
+.language button{background:none;border:0;color:#999;padding:5px 0}
+.language button.active{color:#ffcc00;font-weight:800}
+.menu{display:none;background:none;border:0;width:30px;height:30px}
+.menu span{display:block;height:2px;background:white;margin:6px 0}
+
+.hero{height:min(900px,100svh);min-height:680px;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.92)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#08090bf1 0%,#08090bbd 33%,#08090b55 100%),linear-gradient(0deg,#08090bd7 0%,transparent 45%)}
+.hero-content{position:relative;z-index:1;margin-top:50px}
+.eyebrow,.section-meta,.kicker{display:flex;align-items:center;gap:17px;font-size:11px;letter-spacing:.2em;font-weight:700;color:#ffcc00}
+.dash{width:27px;height:1px;background:#ffcc00}
+.hero h1{font:800 clamp(54px,6.8vw,105px)/1.09 'Manrope',sans-serif;letter-spacing:-.067em;margin:30px 0 23px;max-width:1060px}
+.hero h1 em{font-style:normal;color:#ffcc00}
+.hero-content>p{font-size:21px;color:#d8d5ce;max-width:520px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+.btn{min-height:52px;display:inline-flex;align-items:center;gap:35px;padding:0 23px;font-weight:800;font-size:11px;letter-spacing:.12em;justify-content:space-between;transition:transform .2s;border:0}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:#ffcc00;color:#101113}
+.btn-outline{border:1px solid #ffffff75;color:#fff}
+.hero-bottom{position:absolute;z-index:1;bottom:30px;left:0;right:0;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.15em;color:#d0ceca}
+
+.section-meta{margin-bottom:32px}
+.number{border:1px solid #ffcc0069;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;letter-spacing:0;font-size:10px}
+h2{font:800 clamp(37px,4.3vw,67px)/1.13 'Manrope',sans-serif;letter-spacing:-.055em;margin:0}
+h3{font:800 26px/1.2 'Manrope',sans-serif;letter-spacing:-.03em;margin:12px 0 20px}
+p{line-height:1.85;color:#aaa9a9}
+
+.intro-grid{display:grid;grid-template-columns:1fr .88fr;gap:11%}
+.intro-copy p:first-child{margin-top:0;color:#eeebe5;font-size:18px}
+.intro-copy blockquote{font:700 24px/1.5 'Manrope',sans-serif;border-left:2px solid #ffcc00;margin:32px 0 0;padding-left:23px;color:#ffda45}
+
+.vision{background:#15161a}
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}
+.vision-pic img{height:650px;width:100%;object-fit:cover}
+.vision-copy .lead{font-size:21px;color:#f0eee9;margin-top:31px}
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:35px 0;color:#e5e0d8;font-size:14px}
+.closing{font-weight:700!important;font-size:17px}
+
+.shows-heading{display:flex;justify-content:space-between;gap:10%;align-items:end;margin-bottom:40px}
+.shows-heading p{max-width:350px}
+.show-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.show-cards.three-up{grid-template-columns:repeat(3,1fr)}
+.show-card{background:#17181c;overflow:hidden}
+.show-card>img{width:100%;height:300px;object-fit:cover}
+.show-card-body{padding:36px}
+.show-card-body p{min-height:120px}
+.card-foot{border-top:1px solid #ffffff20;padding-top:23px;margin-top:22px;font-size:11px;letter-spacing:.13em;color:#ffcc00;font-weight:800}
+
+.video-section{background:#15161a}
+.video-head{display:flex;align-items:end;justify-content:space-between;gap:12%;margin-bottom:38px}
+.video-head p{max-width:375px}
+.video-shell{display:flex;justify-content:center}
+.video-frame{aspect-ratio:16/9;background:#050505;box-shadow:0 28px 80px #0008;width:min(820px,100%)}
+.video-frame iframe{width:100%;height:100%;border:0}
+.text-link{display:inline-block;font-size:12px;letter-spacing:.13em;color:#ffcc00;margin-top:30px}
+
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:9%}
+.experience-grid>img{height:540px;width:100%;object-fit:cover}
+.experience-grid p{font-size:19px}
+.experience-grid ul,.beyond ul{padding:0;list-style:none;color:#e9e7e2;margin-top:25px}
+.experience-grid li,.beyond li{padding:13px 0;border-bottom:1px solid #ffffff1c}
+.experience-grid li:before,.beyond li:before{content:'↗';margin-right:14px;color:#ffcc00}
+
+.beyond{background:#15161a}
+.beyond-grid{display:grid;grid-template-columns:.82fr 1fr;gap:9%;align-items:center}
+.beyond-photo img{height:610px;width:100%;object-fit:cover}
+
+.partners>p{max-width:550px}
+.logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#2c2c2c;margin-top:46px;border:1px solid #292929}
+.logo-grid>div{height:145px;background:#eaeaea;display:flex;align-items:center;justify-content:center;padding:27px}
+.logo-grid img{max-height:85px;max-width:100%;object-fit:contain}
+
+.contact{background:#1b1a18}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:8%;align-items:start}
+.contact-grid>div>p{font-size:20px;max-width:450px}
+.contact-panel{background:#101114;padding:42px;display:flex;flex-direction:column;align-items:start}
+.contact-logo{height:64px;width:auto;margin-bottom:22px}
+.contact-panel>p{margin:0 0 16px 0}
+.contact-panel .contact-email{color:#ffda45;font-weight:700;margin-bottom:8px}
+.contact-phone{color:#d8d5ce;margin-bottom:26px}
+.contact-form{display:grid;gap:12px;width:100%}
+.contact-form input,.contact-form textarea{width:100%;background:#181a20;border:1px solid #ffffff1a;color:#f4f2ed;padding:14px 16px}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#95969b}
+.contact-form .btn{margin-top:6px;width:100%;justify-content:center}
+.social-icons{display:flex;gap:14px;margin-top:24px}
+.social-icons a{display:grid;place-items:center;width:42px;height:42px;border:1px solid #ffffff2e;border-radius:50%;transition:border-color .2s,transform .2s}
+.social-icons a:hover{border-color:#ffcc00;transform:translateY(-2px)}
+.social-icons svg{width:19px;height:19px;fill:currentColor}
+
+.footer{padding:48px 0 20px}
+.footer-top,.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.footer-brand img{height:52px;width:auto}
+.social-labels{display:flex;gap:28px;font-size:12px;letter-spacing:.09em;color:#bfbfbf}
+.footer-bottom{border-top:1px solid #ffffff28;margin-top:28px;padding-top:20px;color:#808080;font-size:10px;letter-spacing:.13em}
+
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #ffcc00;outline-offset:4px}
+
+@media(max-width:1050px){
+  .topbar nav{gap:13px}
+  .topbar nav a{font-size:10px}
+  .brand-logo img{height:42px}
+  .logo-grid{grid-template-columns:repeat(4,1fr)}
+  .show-cards.three-up{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:760px){
+  .wrap{width:calc(100% - 38px)}
+  .section{padding-block:75px}
+  .topbar{height:70px;padding:0 19px}
+  .brand-logo img{height:34px}
+  .topbar nav{display:none;position:absolute;top:70px;left:0;right:0;background:#111216;padding:26px 22px;flex-direction:column;align-items:start;gap:21px}
+  .topbar nav.open{display:flex}
+  .topbar nav a{font-size:15px}
+  .menu{display:block}
+  .nav-actions{gap:18px}
+  .hero{min-height:660px;height:90svh}
+  .hero-image{object-position:62% center}
+  .hero-shade{background:linear-gradient(90deg,#08090be9,#08090b72),linear-gradient(0deg,#08090bef,transparent 50%)}
+  .hero h1{font-size:clamp(43px,10vw,70px);letter-spacing:-.065em}
+  .hero-content>p{font-size:17px}
+  .hero-bottom{font-size:8px}
+  .hero-buttons{gap:9px}
+  .btn{padding-inline:15px;gap:10px;font-size:10px}
+  .intro-grid,.vision-grid,.show-cards,.show-cards.three-up,.experience-grid,.beyond-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+  .vision-pic{order:2}
+  .vision-pic img,.beyond-photo img{height:430px}
+  .beyond-photo{order:2}
+  .shows-heading,.video-head{display:block}
+  .show-card>img{height:270px}
+  .show-card-body{padding:25px}
+  .show-card-body p{min-height:0}
+  .experience-grid>img{height:380px}
+  .logo-grid{grid-template-columns:repeat(2,1fr)}
+  .logo-grid>div{height:125px;padding:18px}
+  .contact-panel{padding:25px}
+  .footer-top,.footer-bottom{align-items:start;flex-direction:column}
+  .social-labels{flex-wrap:wrap;gap:18px}
+  .hero-bottom>a{display:none}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.social-icons a{transition:none}}
+
+/* Premium refinement: cinematic glass navigation, scroll motion and accessibility */
+:root{--gold:#ffcc00;--paper:#f4f2ed;--brand-yellow:#ffcc00}
+.topbar{position:fixed;background:linear-gradient(180deg,rgba(7,8,11,.90),rgba(7,8,11,.60));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:background .25s,box-shadow .25s}
+.topbar.scrolled{background:rgba(8,9,12,.94);box-shadow:0 10px 45px rgba(0,0,0,.24)}
+.brand-logo{display:block;flex:0 1 275px;min-width:145px}
+.brand-logo img{width:100%;max-width:265px;height:auto;max-height:66px;object-fit:contain;object-position:left center}
+.hero-image{object-position:58% 35%;transform:scale(1.025);animation:heroDrift 17s ease-in-out alternate infinite}
+.hero-shade{background:linear-gradient(90deg,rgba(7,7,11,.93) 0%,rgba(7,7,11,.70) 38%,rgba(7,7,11,.09) 100%),linear-gradient(0deg,rgba(7,7,11,.75),transparent 44%)}
+.hero h1{text-wrap:balance;text-shadow:0 3px 40px rgba(0,0,0,.18)}
+.section h2{text-wrap:balance}
+.btn,.show-card,.logo-grid>div{transition:transform .3s ease,background .3s ease,box-shadow .3s ease}
+.show-card:hover{transform:translateY(-7px);box-shadow:0 20px 48px rgba(0,0,0,.22)}
+.logo-grid>div:hover{background:#fff}
+.show-card>img{transition:transform .6s ease}
+.show-card:hover>img{transform:scale(1.025)}
+.video-frame{border:1px solid rgba(255,204,0,.28)}
+.video-frame:focus-within{outline:2px solid var(--gold)}
+.contact-form select{width:100%;border-radius:0;background:#181a20;border:1px solid #ffffff1a;color:#f4f2ed;padding:14px 16px}
+.contact-form select:invalid{color:#95969b}
+.contact-form select option{color:#fff;background:#181a20}
+.form-note{font-size:12px!important;line-height:1.6;margin-top:12px!important;color:#92939a}
+.honeypot{position:absolute!important;left:-10000px!important;opacity:0!important;width:1px!important;height:1px!important;pointer-events:none!important}
+.social-icons a:focus-visible,.contact-form select:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.floating-contact{display:none}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes heroDrift{to{transform:scale(1.09)}}
+@media(max-width:1200px){.topbar{padding-inline:25px}.brand-logo{flex-basis:220px}.brand-logo img{max-width:220px}.topbar nav{gap:14px}}
+@media(max-width:1050px){.brand-logo{flex-basis:180px}.brand-logo img{max-width:180px}.topbar nav a{font-size:10px}.topbar nav{gap:10px}}
+@media(max-width:760px){
+ .topbar{background:rgba(8,9,12,.94)}
+ .brand-logo{flex:0 1 220px;max-width:calc(100vw - 155px)}
+ .brand-logo img{max-width:100%;max-height:55px;height:auto}
+ .hero-image{object-position:63% center}
+ .hero-shade{background:linear-gradient(90deg,rgba(8,9,11,.86),rgba(8,9,11,.47)),linear-gradient(0deg,#08090be8,transparent 60%)}
+ .hero-content{margin-top:45px}
+ .hero h1{max-width:620px}
+ .video-frame{width:100%}
+ .floating-contact{display:flex;position:fixed;bottom:14px;right:14px;z-index:12;align-items:center;justify-content:center;border:1px solid #765f00;padding:12px 18px;background:var(--gold);color:#101113;box-shadow:0 8px 30px rgba(0,0,0,.45);font-size:11px;font-weight:800;letter-spacing:.07em}
+ .contact{padding-bottom:110px}
+ .footer-brand img{max-width:300px;height:auto}
+}
+@media(max-width:390px){.brand-logo{max-width:calc(100vw - 133px)}.nav-actions{gap:11px}.hero h1{font-size:clamp(37px,10vw,52px)}.hero-buttons .btn{width:100%}.check-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-image{animation:none}.show-card,.show-card>img{transition:none}}
+
+/* Tablet navigation adapts before the menu becomes crowded. */
+@media (min-width:761px) and (max-width:1050px){
+ .topbar nav{display:none;position:absolute;top:86px;right:0;left:0;background:#111216;padding:28px 35px;flex-direction:column;align-items:flex-start;gap:22px;box-shadow:0 20px 50px #0009}
+ .topbar nav.open{display:flex}
+ .topbar nav a{font-size:14px}
+ .menu{display:block}
+ .brand-logo{flex-basis:270px}
+ .brand-logo img{max-width:270px}
+}
+
+/* Corporate yellow identity: consistent premium interactions */
+.btn-gold:hover,.floating-contact:hover{background:#ffe15a}
+::selection{background:#ffcc00;color:#08090b}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:#ffcc00}
+
+
+/* v4 — legible section labels, uncropped photography and colored social icons */
+/* Increase section/category labels 3px on all screen sizes, without changing title proportions. */
+.section-meta{font-size:14px;letter-spacing:.14em;gap:14px;line-height:1.4}
+.section-meta .number{font-size:11px;flex:0 0 36px;width:36px;height:36px}
+@media(max-width:760px){.section-meta{font-size:13px;letter-spacing:.11em}}
+
+/* Images show the entire photograph without crop, including portrait-format shows. */
+.vision-pic,.beyond-photo{display:flex;align-items:center;justify-content:center;min-width:0}
+.vision-pic img,.beyond-photo img{display:block;width:100%;height:auto;max-height:610px;object-fit:contain;background:#101114}
+.show-card>img{width:100%;height:390px;object-fit:contain;object-position:center;background:#0c0d10;padding:10px}
+.show-card:hover>img{transform:none}
+.experience-grid>img{height:auto;max-height:540px;object-fit:contain;background:#0c0d10}
+@media(min-width:761px) and (max-width:1050px){.show-card>img{height:350px}}
+@media(max-width:760px){.vision-pic img,.beyond-photo img{height:auto;max-height:460px}.show-card>img{height:370px}.experience-grid>img{height:auto;max-height:430px}}
+@media(max-width:390px){.show-card>img{height:340px}}
+
+.contact-details{display:flex;flex-direction:column;align-items:flex-start;gap:11px;padding:22px 0 0;font-size:16px}
+.contact-details strong{font:800 21px/1.3 'Manrope',sans-serif;color:#fff}
+.contact-details span{font-size:14px;color:#c8c8c8;margin-bottom:6px}
+.contact-details a{font-size:16px;color:#f4f2ed;text-decoration:none;overflow-wrap:anywhere}
+.contact-details a:hover{color:#ffcc00}
+.social-icons a{background:#11151a;color:#fff}
+.social-icons .social-instagram{color:#fff;background:linear-gradient(135deg,#405de6,#833ab4 38%,#c13584 65%,#fd1d1d 82%,#fcb045);border-color:transparent}
+.social-icons .social-linkedin{color:#fff;background:#0a66c2;border-color:transparent}
+.social-icons .social-vimeo{color:#fff;background:#1ab7ea;border-color:transparent}
+.social-icons a:hover{filter:brightness(1.14);color:#fff;border-color:transparent}
+.social-labels a{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}
+.social-labels svg{width:17px;height:17px;fill:currentColor}
+.social-labels .social-instagram{color:#dd4b85}
+.social-labels .social-linkedin{color:#0a92e3}
+.social-labels .social-vimeo{color:#1ab7ea}
+@media(max-width:760px){.contact-details{padding-top:8px}}
+
+
+/* v6 — understated closing note under brand logos */
+.partners-more{margin:25px 0 0 auto!important;max-width:none!important;text-align:right;color:#ffcc00;font:700 clamp(15px,1.65vw,19px)/1.4 'Manrope',sans-serif;letter-spacing:.095em}
+@media(max-width:760px){.partners-more{margin-top:20px!important;font-size:15px;letter-spacing:.06em}}
+
+
+/* v8 — Corrected: OUR VISION / BEYOND THE CURTAIN as cinematic tilted photo background */
+.vision{position:relative;isolation:isolate;overflow:hidden;min-height:740px;background:#111217}
+.vision::before{content:"";position:absolute;z-index:-2;top:-15%;left:-8%;width:70%;height:130%;background:url('../assets/concept-vision-v132.webp') center center/contain no-repeat;transform:rotate(-45deg) scale(1.06);transform-origin:center;opacity:.88}
+.vision::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,10,13,.10) 0%,rgba(9,10,13,.34) 40%,rgba(9,10,13,.92) 66%,#111217 100%)}
+.vision-grid{display:flex;justify-content:flex-end;align-items:center;min-height:540px}
+.vision-copy{width:min(49%,590px);position:relative;padding:16px 0}
+.vision-copy p{color:#d0cfd0}
+.vision-copy .lead{color:#fff}
+/* The audience photo belongs to the lower ENTERTAINMENT BEYOND THE THEATER section. */
+.beyond{background:#15161a;position:relative;overflow:visible}
+.beyond::before,.beyond::after{content:none}
+.beyond-grid{display:grid;grid-template-columns:.82fr 1fr;gap:9%;align-items:center;min-height:0}
+.beyond-photo{display:flex;align-items:center;justify-content:center}
+.beyond-photo img{display:block;width:100%;height:auto;max-height:610px;object-fit:contain;background:#101114}
+.beyond-grid > div:last-child{max-width:none;padding:0}
+@media (min-width:761px) and (max-width:1050px){
+ .vision::before{left:-18%;width:86%;opacity:.73}
+ .vision::after{background:linear-gradient(90deg,rgba(9,10,13,.18),rgba(9,10,13,.82) 59%,#111217)}
+ .vision-copy{width:54%}
+}
+@media(max-width:760px){
+ .vision{min-height:auto}
+ .vision::before{top:-13%;left:-45%;width:150%;height:97%;transform:rotate(-22deg) scale(1.04);opacity:.41}
+ .vision::after{background:linear-gradient(180deg,rgba(9,10,13,.55),rgba(9,10,13,.88) 42%,#111217 94%)}
+ .vision-grid{display:flex;min-height:560px;align-items:center;justify-content:flex-start}
+ .vision-copy{width:100%;padding:25px 0}
+ .beyond-grid{display:grid;grid-template-columns:1fr;gap:35px;min-height:0}
+ .beyond-photo{display:flex;order:2}
+ .beyond-photo img{height:auto;max-height:460px;object-fit:contain}
+}
+
+/* V10: Contact form submission feedback */
+.form-status{font-size:13px;line-height:1.6;padding:12px 14px;margin:12px 0 0;background:#26201a;border-left:3px solid #ffcc00;color:#f4f2ed}
+.form-status.error{border-left-color:#e36b55}
+.contact-form button:disabled{opacity:.66;cursor:wait;transform:none}
+
+/* V12: compact service description reinforces accessible cruise-entertainment copy */
+.seo-service-note{max-width:860px;margin:36px auto 0;text-align:center;font-size:15px;line-height:1.8;color:#c7c7c7}
+@media(max-width:760px){.seo-service-note{text-align:left;font-size:14px;margin-top:26px}}
+
+/* V13 — performance, intrinsic image dimensions and crawlable language links */
+.language a{color:#999;padding:5px 0}.language a.active{color:#ffcc00;font-weight:800}
+.hero-image{display:block;max-width:none}
+/* Keep the cinematic crop and animation; use a native image for early discovery. */
+.show-card .show-media{height:390px;display:flex;align-items:center;justify-content:center;padding:10px;background:#0c0d10}
+.show-card .show-media img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.logo-grid img{width:auto;height:auto;max-height:85px;max-width:100%;object-fit:contain}
+.contact-logo{height:auto;max-height:64px;width:auto;max-width:100%}
+.footer-brand img{height:auto;width:auto;max-height:52px;max-width:100%}
+.beyond-photo img,.experience-grid>img{width:auto;max-width:100%;height:auto;margin-inline:auto}
+@media(min-width:761px) and (max-width:1050px){.show-card .show-media{height:350px}}
+@media(max-width:760px){.show-card .show-media{height:370px}.footer-brand img{max-width:min(300px,100%)}}
+@media(max-width:390px){.show-card .show-media{height:340px}}
+
+/* V13.1: local video facade; no Vimeo requests until activation. */
+.video-frame{position:relative;overflow:hidden}
+.video-launch{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;background:#101114;color:#fff;display:grid;place-items:center;text-align:center}
+.video-launch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.video-launch-content{position:relative;z-index:1;display:grid;justify-items:center;gap:12px;padding:12px;text-shadow:0 2px 8px #000}
+.video-play-symbol{display:grid;place-items:center;border-radius:50%;width:64px;height:64px;background:#ffcc00;color:#101114;font-size:25px;text-shadow:none;padding-left:4px}
+.video-launch strong{letter-spacing:.12em;font-size:14px}.video-launch small{font-size:12px;color:#fff}
+.video-launch:hover .video-play-symbol{background:#ffe15a}.video-launch:focus-visible{outline:3px solid #ffcc00;outline-offset:-5px}
+.video-fallback{position:absolute;bottom:10px;left:10px;background:#101114;padding:12px;color:#ffcc00}
+
+/* V13.2 — responsive decorative artwork, same framing */
+@media(max-width:760px){.vision::before{background-image:url("../assets/concept-vision-mobile.webp")}}
+/* Only animate sections when JavaScript is active. */
+html:not(.js-ready) .reveal{opacity:1;transform:none}
+
+</style>
 <meta content="website" property="og:type"/><meta content="dark" name="color-scheme"/><link href="../favicon.ico" rel="icon" sizes="any"/><link href="../assets/favicon.png" rel="icon" type="image/png"/><link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/><link href="https://www.magovituco.com/es/" rel="canonical"/><link href="https://www.magovituco.com/" hreflang="en" rel="alternate"/><link href="https://www.magovituco.com/es/" hreflang="es" rel="alternate"/><link href="https://www.magovituco.com/" hreflang="x-default" rel="alternate"/><meta content="Espectáculos de magia para cruceros | Mago Vituco Productions" property="og:title"/><meta content="Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco." property="og:description"/><meta content="https://www.magovituco.com/es/" property="og:url"/><meta content="https://www.magovituco.com/assets/hero-main.webp" property="og:image"/><meta content="es_ES" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Espectáculos de magia para cruceros | Mago Vituco Productions" name="twitter:title"/><meta content="Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco." name="twitter:description"/><meta content="index, follow, max-image-preview:large" name="robots"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.magovituco.com/#organization","name":"Mago Vituco Productions","alternateName":"Mago Vituco Producciones","url":"https://www.magovituco.com/","logo":"https://www.magovituco.com/assets/logo-main.png","email":"info@magovituco.com","telephone":"+34 619 823 559","sameAs":["https://www.instagram.com/magovituco","https://www.linkedin.com/in/magovituco","https://vimeo.com/magovituco"],"description":"International magic and live entertainment production for cruise ships and ferries."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.magovituco.com/es/#webpage","url":"https://www.magovituco.com/es/","name":"Espectáculos de magia para cruceros | Mago Vituco Productions","description":"Magia y entretenimiento para cruceros: grandes ilusiones, magos invitados, espectáculos y talleres a bordo. Producción internacional Mago Vituco.","inLanguage":"es","isPartOf":{"@type":"WebSite","@id":"https://www.magovituco.com/#website","url":"https://www.magovituco.com/","name":"Mago Vituco Productions"},"about":{"@id":"https://www.magovituco.com/#organization"}}</script></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="topbar" id="top">
 <a aria-label="Mago Vituco Productions home" class="brand-logo" href="#top">
-<img alt="Mago Vituco Productions" decoding="async" height="106" src="../assets/logo-main-600.webp" width="600"/>
+<img alt="Mago Vituco Productions" decoding="async" height="106" src="../assets/logo-main-600-v132.webp" srcset="../assets/logo-main-400.webp 400w, ../assets/logo-main-600-v132.webp 600w" sizes="(max-width: 760px)  min(300px, 90vw), 385px" width="600"/>
 </a>
 <nav aria-label="Main navigation" id="nav">
 <a data-i="navAbout" href="#about">Quiénes somos</a>
@@ -39,7 +373,7 @@
 </header>
 <main id="main">
 <section class="hero">
-<picture><source media="(max-width: 760px)" srcset="../assets/hero-mobile.webp"/><img alt="" aria-hidden="true" class="hero-image" fetchpriority="high" height="961" loading="eager" src="../assets/hero-desktop.webp" width="1800"/></picture>
+<picture><source media="(max-width: 760px)" srcset="../assets/hero-mobile-v132.webp"/><img alt="" aria-hidden="true" class="hero-image" fetchpriority="high" height="961" loading="eager" src="../assets/hero-desktop.webp" width="1800"/></picture>
 <div class="hero-shade"></div>
 <div class="hero-content wrap">
 <div class="eyebrow"><span class="dash"></span><span data-i="heroEyebrow">MAGIA Y ENTRETENIMIENTO PARA CRUCEROS</span></div>
@@ -92,7 +426,7 @@
 </div>
 <div class="show-cards">
 <article class="show-card reveal">
-<div class="show-media"><img alt="Gran ilusión de escenario para un espectáculo en teatro de cruceros" decoding="async" height="716" loading="lazy" src="../assets/illusions.webp" width="1200"/></div>
+<div class="show-media"><img alt="Gran ilusión de escenario para un espectáculo en teatro de cruceros" decoding="async" height="716" loading="lazy" src="../assets/illusions.webp" srcset="../assets/illusions-640.webp 640w, ../assets/illusions.webp 1200w" sizes="(max-width: 760px) calc(100vw - 58px), 570px" width="1200"/></div>
 <div class="show-card-body">
 <span class="kicker" data-i="largeKicker">01 / ESCENARIO PRINCIPAL</span>
 <h3 data-i="largeTitle">ESPECTÁCULOS DE MAGIA</h3>
@@ -186,7 +520,7 @@
 <p data-i="contactQuote">Los pasajeros no recuerdan los horarios. Recuerdan los momentos.</p><div class="contact-details reveal"><strong>Mago Vituco</strong><span data-i="founder">Fundador y Productor</span><a href="tel:+34619823559">📞 +34 619 823 559</a><a href="mailto:info@magovituco.com">✉️ info@magovituco.com</a></div>
 </div>
 <div class="contact-panel reveal">
-<img alt="Mago Vituco Productions" class="contact-logo" decoding="async" height="106" loading="lazy" src="../assets/logo-main-600.webp" width="600"/>
+<img alt="Mago Vituco Productions" class="contact-logo" decoding="async" height="106" loading="lazy" src="../assets/logo-main-600-v132.webp" srcset="../assets/logo-main-400.webp 400w, ../assets/logo-main-600-v132.webp 600w" sizes="(max-width: 760px)  min(300px, 90vw), 385px" width="600"/>
 <p data-i="contactIntro">¿Estás organizando entretenimiento para un crucero, una producción de magia o la contratación de un artista invitado? Cuéntanos tu proyecto.</p>
 <a class="contact-email" href="mailto:info@magovituco.com">info@magovituco.com</a>
 <a class="contact-phone" href="tel:+34619823559">+34 619 823 559</a>
@@ -216,7 +550,7 @@
 <footer class="footer wrap">
 <div class="footer-top">
 <a aria-label="Mago Vituco Productions home" class="footer-brand" href="#top">
-<img alt="Mago Vituco Productions" decoding="async" height="106" loading="lazy" src="../assets/logo-main-600.webp" width="600"/>
+<img alt="Mago Vituco Productions" decoding="async" height="106" loading="lazy" src="../assets/logo-main-600-v132.webp" srcset="../assets/logo-main-400.webp 400w, ../assets/logo-main-600-v132.webp 600w" sizes="(max-width: 760px)  min(300px, 90vw), 385px" width="600"/>
 </a>
 <div class="social-labels">
 <a class="social-instagram" href="https://www.instagram.com/magovituco" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm10.25 1.65a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z"></path></svg>Instagram</a>
@@ -229,6 +563,6 @@
 <span>© <span id="year"></span> MAGO VITUCO PRODUCTIONS</span>
 </div>
 </footer>
-<script defer="" src="../script.js?v=13"></script>
+<script defer="" src="../script.js?v=13.2"></script>
 <a class="floating-contact" data-i="floatContact" href="#contact">CONTACTAR ↗</a></body>
 </html>

@@ -1,4 +1,4 @@
-# MAGO VITUCO PRODUCTIONS — Premium V13 SEO & Performance
+# MAGO VITUCO PRODUCTIONS — Premium V13.2 SEO & Performance
 
 Base: Premium V12 SEO. Sitio estático para GitHub Pages, https://www.magovituco.com/.
 
@@ -17,3 +17,11 @@ Comprobar ambas páginas, cambio de idioma, Vimeo y formulario. Repetir PageSpee
 
 ## V13.1 — Performance Fix
 Reproductor Vimeo bajo demanda, con imagen local y aviso de conexión. El parámetro dnt=1 reduce el seguimiento, pero Vimeo puede usar cookies esenciales al reproducir. Puede afectar al descubrimiento automático del vídeo por Google. Se conservan SEO, formulario, imágenes y navegación. Repetir PageSpeed tras publicar.
+
+## V13.2
+- CSS principal integrado en ambas páginas para evitar una solicitud bloqueante; style.css se conserva para thanks.html. Si se modifica CSS, sincronizar las copias integradas.
+- Variantes responsive de logo e ilusiones; imagen de visión y hero móvil optimizadas.
+- Se elimina la reescritura redundante del HTML por JS: los idiomas ya tienen páginas estáticas propias. Lectura inicial de scroll en requestAnimationFrame.
+- llms.txt informativo opcional; comprobar que devuelve HTTP 200 tras publicar. No garantiza posicionamiento ni corrige fallos del servidor.
+- Se conserva Vimeo bajo demanda. Caché HTTP depende de GitHub Pages.
+- Validar diseño, vídeo, navegación, formulario y PageSpeed en ambos idiomas tras publicar.

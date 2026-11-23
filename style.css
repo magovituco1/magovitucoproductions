@@ -264,7 +264,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 /* v8 — Corrected: OUR VISION / BEYOND THE CURTAIN as cinematic tilted photo background */
 .vision{position:relative;isolation:isolate;overflow:hidden;min-height:740px;background:#111217}
-.vision::before{content:"";position:absolute;z-index:-2;top:-15%;left:-8%;width:70%;height:130%;background:url('assets/concept-vision.webp') center center/contain no-repeat;transform:rotate(-45deg) scale(1.06);transform-origin:center;opacity:.88}
+.vision::before{content:"";position:absolute;z-index:-2;top:-15%;left:-8%;width:70%;height:130%;background:url('assets/concept-vision-v132.webp') center center/contain no-repeat;transform:rotate(-45deg) scale(1.06);transform-origin:center;opacity:.88}
 .vision::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,10,13,.10) 0%,rgba(9,10,13,.34) 40%,rgba(9,10,13,.92) 66%,#111217 100%)}
 .vision-grid{display:flex;justify-content:flex-end;align-items:center;min-height:540px}
 .vision-copy{width:min(49%,590px);position:relative;padding:16px 0}
@@ -325,3 +325,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .video-launch strong{letter-spacing:.12em;font-size:14px}.video-launch small{font-size:12px;color:#fff}
 .video-launch:hover .video-play-symbol{background:#ffe15a}.video-launch:focus-visible{outline:3px solid #ffcc00;outline-offset:-5px}
 .video-fallback{position:absolute;bottom:10px;left:10px;background:#101114;padding:12px;color:#ffcc00}
+
+/* V13.2 — responsive decorative artwork, same framing */
+@media(max-width:760px){.vision::before{background-image:url("assets/concept-vision-mobile.webp")}}
+/* Only animate sections when JavaScript is active. */
+html:not(.js-ready) .reveal{opacity:1;transform:none}
