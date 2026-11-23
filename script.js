@@ -38,13 +38,25 @@ function setLanguage(lang){
   try{localStorage.setItem('mvp-language',lang)}catch(e){}
 }
 
-document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{
+  const requested=b.dataset.lang;
+  const current=window.location.pathname.replace(/\/+$/,'').endsWith('/es')?'es':'en';
+  if(requested===current)return;
+  try{localStorage.setItem('mvp-language',requested)}catch(e){}
+  window.location.assign(new URL(requested==='es'?'es/':'../', window.location.href).href);
+}));
 const menu=document.getElementById('menu');
 const nav=document.getElementById('nav');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
 document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
 document.getElementById('year').textContent=new Date().getFullYear();
-try{if(localStorage.getItem('mvp-language')==='es')setLanguage('es'); else setLanguage('en')}catch(e){setLanguage('en')}
+// Language belongs to the URL for search engines; English is the default home page.
+const pageLanguage=window.location.pathname.replace(/\/+$/,'').endsWith('/es')?'es':'en';
+if(pageLanguage==='es'){
+  document.documentElement.lang='es';
+  document.querySelectorAll('[data-lang]').forEach(b=>{const active=b.dataset.lang==='es';b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+}else{setLanguage('en')}
+
 
 const topbar=document.querySelector('.topbar');
 function updateTopbar(){topbar?.classList.toggle('scrolled',window.scrollY>24)}
@@ -98,7 +110,7 @@ if(contactForm){
         const details=Array.isArray(body?.errors)?body.errors.map(x=>x.message).filter(Boolean).join(' '):'';
         throw new Error(details||copy.failed);
       }
-      const target=new URL('thanks.html',window.location.href);
+      const target=new URL(lang==='es'?'../thanks.html':'thanks.html',window.location.href);
       target.searchParams.set('lang',lang);
       window.location.assign(target.href);
     }catch(error){
