@@ -61,6 +61,7 @@ if(contactForm){
         const details=Array.isArray(body?.errors)?body.errors.map(x=>x.message).filter(Boolean).join(' '):'';
         throw new Error(details||copy.failed);
       }
+      window.mvpTrack?.('generate_lead');
       const target=new URL(lang==='es'?'../thanks.html':'thanks.html',window.location.href);
       target.searchParams.set('lang',lang);
       window.location.assign(target.href);
@@ -81,6 +82,7 @@ if(contactForm){
 // V13.1: load Vimeo only following explicit user activation.
 document.querySelectorAll('.video-launch').forEach(button=>{
   button.addEventListener('click',()=>{
+    window.mvpTrack?.('showreel_open');
     const iframe=document.createElement('iframe');
     iframe.title=document.documentElement.lang==='es'?'Video promocional de Mago Vituco':'Mago Vituco showreel';
     iframe.allow='autoplay; fullscreen; picture-in-picture';

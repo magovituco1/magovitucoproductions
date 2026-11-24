@@ -28,3 +28,6 @@ Reproductor Vimeo bajo demanda, con imagen local y aviso de conexión. El parám
 
 ## V13.3
 - Reproductor panorámico 16:9 con imagen independiente del botón y sin deformación; mantiene Vimeo bajo demanda.
+
+## V13.4
+GA4 G-9XTKW91EWG, carga solo tras consentimiento, eventos personalizados. Antes de publicar completar y revisar las políticas: identidad legal del responsable, domicilio profesional si corresponde, base jurídica, plazos de conservación, transferencias internacionales y garantías, destinatarios y duración real de cookies. Desactivar medición mejorada de formularios y vídeos. Probar aceptación, rechazo, retirada y formulario.
