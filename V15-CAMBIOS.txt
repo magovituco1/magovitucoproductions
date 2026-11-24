@@ -1,0 +1,9 @@
+V15 — International SEO & Commercial Positioning
+Base: ZIP V14 original.
+20 páginas: títulos, descripciones, datos sociales y schema WebPage/Service revisados.
+Portadas: texto corporativo y ALT de portada de vídeo; fondo decorativo conserva ALT vacío.
+Privacidad: dos meta descriptions.
+Analytics: enlace descriptivo bilingüe, sin alterar consentimiento.
+VERTIGO: enlaces oficiales y oferta de flying.
+Sitemap, CSS, imágenes, formularios e IndexNow conservados.
+Publicar sobre los archivos existentes, incluidos los ocultos. Comprobar PageSpeed, consentimiento, formularios y Site Scan tras el despliegue.
