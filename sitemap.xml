@@ -1,15 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.magovituco.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/" />
   </url>
   <url>
     <loc>https://www.magovituco.com/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/cruise-ship-magic-shows/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/cruise-ship-magic-shows/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/magia-para-cruceros/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/cruise-ship-magic-shows/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/magia-para-cruceros/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/cruise-ship-magic-shows/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/magia-para-cruceros/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/cruise-ship-magic-shows/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/illusion-productions/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/illusion-productions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/grandes-ilusiones/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/illusion-productions/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/grandes-ilusiones/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/illusion-productions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/grandes-ilusiones/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/illusion-productions/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/guest-entertainers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/guest-entertainers/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/artistas-invitados/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/guest-entertainers/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/artistas-invitados/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/guest-entertainers/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/artistas-invitados/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/guest-entertainers/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/ferry-entertainment/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/ferry-entertainment/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/entretenimiento-para-ferris/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/ferry-entertainment/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/entretenimiento-para-ferris/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/ferry-entertainment/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/entretenimiento-para-ferris/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/ferry-entertainment/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/magic-workshops/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/magic-workshops/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/talleres-de-magia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/magic-workshops/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/talleres-de-magia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/magic-workshops/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/talleres-de-magia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/magic-workshops/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/magic-experiences/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/magic-experiences/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/experiencias-de-magia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/magic-experiences/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/experiencias-de-magia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/magic-experiences/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/experiencias-de-magia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/magic-experiences/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/entertainment-consultancy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/entertainment-consultancy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/consultoria-de-entretenimiento/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/entertainment-consultancy/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/consultoria-de-entretenimiento/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/entertainment-consultancy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/consultoria-de-entretenimiento/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/entertainment-consultancy/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/productions/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/productions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/producciones/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/productions/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/producciones/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/productions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/producciones/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/productions/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/experience/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/experience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/trayectoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/experience/" />
+  </url>
+  <url>
+    <loc>https://www.magovituco.com/es/trayectoria/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magovituco.com/experience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.magovituco.com/es/trayectoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magovituco.com/experience/" />
   </url>
 </urlset>

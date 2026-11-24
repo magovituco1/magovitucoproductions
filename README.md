@@ -31,3 +31,6 @@ Reproductor Vimeo bajo demanda, con imagen local y aviso de conexión. El parám
 
 ## V13.4
 GA4 G-9XTKW91EWG, carga solo tras consentimiento, eventos personalizados. Antes de publicar completar y revisar las políticas: identidad legal del responsable, domicilio profesional si corresponde, base jurídica, plazos de conservación, transferencias internacionales y garantías, destinatarios y duración real de cookies. Desactivar medición mejorada de formularios y vídeos. Probar aceptación, rechazo, retirada y formulario.
+
+## V14 International SEO
+18 páginas nuevas EN/ES, enlaces de servicios al final de ambas portadas, sitemap con 20 URLs, canonical y hreflang recíprocos, datos de Service y WebPage, llms.txt actualizado. Mantener CNAME y archivos de verificación del repositorio. Subir directorios completos y archivos raíz; conservar .github/workflows/indexnow.yml existente. Validar publicación, enlaces, consentimiento, formulario, vídeo y PageSpeed. Revisar textos y datos legales antes de publicar. No se garantizan rankings ni indexación.

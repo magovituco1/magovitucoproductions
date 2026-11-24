@@ -1,0 +1,10 @@
+V13.5 — IndexNow
+
+No se modifica ningún archivo visual ni Analytics de V13.4.
+1. Sube el archivo de clave a la raíz del repositorio y conserva CNAME.
+2. Crea .github/workflows/indexnow.yml con el contenido del archivo YAML incluido.
+3. Espera a que GitHub Pages publique y comprueba que https://www.magovituco.com/4f692f11971c41268bc9fc806329f1a1.txt devuelve la clave.
+4. Actions > IndexNow after Pages deployment > Run workflow.
+5. HTTP 200 = recibido; 202 = recibido, verificación pendiente. No garantiza indexación.
+La ejecución automática depende de que el workflow de despliegue se llame exactamente pages build and deployment; si tiene otro nombre, cambia workflows en el YAML. La ejecución manual sigue disponible.
+El workflow notifica las URLs actuales del sitemap tras cada despliegue exitoso; para URLs eliminadas, notifícalas aparte.
