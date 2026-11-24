@@ -57,6 +57,8 @@
     function apply(lang){
       document.documentElement.lang=lang;
       document.getElementById('thanks-home').href=lang==='es'?'es/':'./';
+      document.querySelector('.thanks-header > a').href=lang==='es'?'/es/':'/';
+      document.querySelector('.thanks-header > a').setAttribute('aria-label',lang==='es'?'Mago Vituco Productions — Inicio':'Mago Vituco Productions — Home');
       document.title=(lang==='es'?'Gracias por contactar | ':'Thank you | ')+'Mago Vituco Producciones';
       const data=copy[lang];
       for(const field of ['kicker','title','description','home'])document.getElementById('thanks-'+(field==='title'?'title':field==='description'?'description':field==='home'?'home-label':'kicker')).textContent=data[field];
